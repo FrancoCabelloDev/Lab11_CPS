@@ -1,0 +1,80 @@
+# ===============================
+# = PARAMETERS
+# ===============================
+
+# https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#application-properties.core
+
+# ===============================
+# = DATA SOURCE
+# ===============================
+# UNIX or MAC
+# src/test/resources/application-test.yml
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/PETCLINIC_DB?useSSL=false&serverTimezone=UTC
+    username: root
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+
+  # Opcional: si quieres cargar tus scripts SQL en vez de que Hibernate genere el esquema,
+  # descomenta esta sección y coloca schema-mysql.sql y data.sql en src/main/resources
+  #
+  #spring:
+  #  sql:
+  #    init:
+  #      mode: always
+  #      schema-locations: classpath:schema-mysql.sql
+  #      data-locations: classpath:data.sql
+
+
+
+
+  data :
+    rest :
+      basePath : /api
+
+logging :
+  # DEBUG, INFO , ERROR# src/test/resources/application-test.yml
+  #
+  #spring:
+  #  datasource:
+  #    url: jdbc:mysql://localhost:3306/PETCLINIC_DB?useSSL=false&serverTimezone=UTC
+  #    username: root
+  #    password:
+  #    platform: mysql
+  #    initialization-mode: always    # carga schema.sql y data.sql automáticamente
+  #
+  #  jpa:
+  #    hibernate:
+  #      ddl-auto: create-drop       # crea tablas al arrancar, las borra al cerrar
+  #      dialect: org.hibernate.dialect.MySQL5Dialect
+  #    show-sql: true
+  #
+  ## Opcional: si quieres usar tus scripts de src/main/resources/schema-mysql.sql y data.sql
+  ## spring:
+  ##   sql:
+  ##     init:
+  ##       mode: always
+  ##       schema-locations: classpath:schema-mysql.sql
+  ##       data-locations: classpath:data.sql
+  level :
+    root : INFO
+
+  # Output to a temp_folder/file
+  file :
+    name : /Users/jgomez/temp/application.log
+
+  pattern :
+  # Logging pattern for the console : IT IS OK
+  # console : %d{yy-MM-dd HH:mm:ss} - %logger{36} - %msg%n
+  
+  # Logging pattern for file : DONT WORK, DISABLE WRITE FILE LOG
+  # file : %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%
+
+server :
+  port : 8080
