@@ -1,11 +1,22 @@
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\entities\Pet.java
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\entities\Vet.java
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\exception\PetNotFoundException.java
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\exception\VetNotFoundException.java
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\PetClinicApplication.java
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\repositories\PetRepository.java
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\repositories\VetRepository.java
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\services\PetService.java
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\services\PetServiceImpl.java
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\services\VetService.java
-C:\Construcción y pruebas de  software\petclinic_test\src\main\java\com\tecsup\petclinic\services\VetServiceImpl.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\domain\OwnerTO.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\domain\VetTo.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\entities\Owner.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\entities\Pet.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\entities\Vet.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\exception\OwnerNotFoundException.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\exception\PetNotFoundException.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\exception\VetNotFoundException.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\mapper\OwnerMapper.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\mapper\VetMapper.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\PetClinicApplication.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\repositories\OwnerRepository.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\repositories\PetRepository.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\repositories\VetRepository.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\services\OwnerService.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\services\OwnerServiceImpl.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\services\PetService.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\services\PetServiceImpl.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\services\VetService.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\services\VetServiceImpl.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\webs\OwnerController.java
+C:\LABS_DAW\Lab11_CPS\src\main\java\com\tecsup\petclinic\webs\VetController.java

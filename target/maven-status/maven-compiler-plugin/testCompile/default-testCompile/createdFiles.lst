@@ -1,0 +1,11 @@
+com\tecsup\petclinic\services\SpecialtyServiceTest.class
+com\tecsup\petclinic\webs\VetControllerTest.class
+com\tecsup\petclinic\webs\OwnerControllerMockitoTest.class
+com\tecsup\petclinic\webs\VetControllerMockitoTest.class
+com\tecsup\petclinic\services\VetServiceTest.class
+com\tecsup\petclinic\services\PetServiceMockitoTest.class
+com\tecsup\petclinic\services\PetServiceTest.class
+com\tecsup\petclinic\PetClinicApplicationTests.class
+com\tecsup\petclinic\services\OwnerServiceTest.class
+com\tecsup\petclinic\util\TObjectCreator.class
+com\tecsup\petclinic\webs\OwnerControllerTest.class
