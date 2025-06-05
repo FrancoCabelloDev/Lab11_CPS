@@ -40,7 +40,7 @@ public class OwnerControllerTest {
 
     @Test
     void testFindOwnerById() {
-        Long id = 1L; // Asegúrate que exista un Owner con este ID en data.sql
+        Long id = 1L;
 
         ResponseEntity<Owner> response = restTemplate.getForEntity(baseUrl + "/" + id, Owner.class);
 
