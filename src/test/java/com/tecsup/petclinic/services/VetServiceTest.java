@@ -26,11 +26,10 @@ class VetServiceTest {
     private static Long vetId;
 
     @Test
-    @Order(1)
     void testCreateVet() {
         Vet v = new Vet();
-        v.setFirstName("Ana");
-        v.setLastName("Gómez");
+        v.setFirstName("Francis");
+        v.setLastName("Pomasoncco");
         Vet saved = vetService.save(v);
         assertNotNull(saved.getId(), "El ID no debe ser nulo tras guardar");
         vetId = saved.getId();
