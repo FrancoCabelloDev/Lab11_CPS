@@ -1,7 +1,9 @@
 package com.tecsup.petclinic.webs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.tecsup.petclinic.domain.OwnerTO;
 import com.tecsup.petclinic.entities.Owner;
+import com.tecsup.petclinic.mapper.OwnerMapper;
 import com.tecsup.petclinic.services.OwnerService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -24,15 +26,19 @@ public class OwnerControllerMockitoTest {
     @MockBean
     private OwnerService ownerService;
 
+    @MockBean
+    private OwnerMapper ownerMapper;
+
     @Autowired
     private ObjectMapper objectMapper;
 
     @Test
     void testGetOwnerById() throws Exception {
-        // Usamos Integer en lugar de Long para que coincida con el tipo usado en el controlador
         Owner mockOwner = new Owner(1, "Carlos", "Quispe", "Lima", "Lima", "987654321");
+        OwnerTO mockOwnerTO = new OwnerTO(1, "Carlos", "Quispe", "Lima", "Lima", "987654321");
 
         Mockito.when(ownerService.findById(1)).thenReturn(mockOwner);
+        Mockito.when(ownerMapper.toOwnerTO(mockOwner)).thenReturn(mockOwnerTO);
 
         mockMvc.perform(get("/owners/1"))
                 .andExpect(status().isOk())
@@ -41,3 +47,4 @@ public class OwnerControllerMockitoTest {
                 .andExpect(jsonPath("$.city", is("Lima")));
     }
 }
+
