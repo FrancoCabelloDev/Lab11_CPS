@@ -1,5 +1,6 @@
 package com.tecsup.petclinic.util;
 
+import com.tecsup.petclinic.dtos.OwnerDTO;
 import com.tecsup.petclinic.dtos.PetDTO;
 import com.tecsup.petclinic.entities.Pet;
 
@@ -83,4 +84,27 @@ public class TObjectCreator {
 	public static PetDTO newPetTOForDelete() {
 		return new PetDTO(10000,"Beethoven3",1,1, "2020-05-20");
 	}
+
+	public static OwnerDTO getOwnerDTO() {
+		return new OwnerDTO(1, "George", "Franklin", "110 W. Liberty St.", "Madison", "6085551023");
+	}
+
+	public static List<OwnerDTO> getAllOwnerDTOs() {
+		List<OwnerDTO> list = new ArrayList<>();
+		list.add(new OwnerDTO(1, "George", "Franklin", "110 W. Liberty St.", "Madison", "6085551023"));
+		list.add(new OwnerDTO(2, "Betty", "Davis", "638 Cardinal Ave.", "Sun Prairie", "6085551749"));
+		list.add(new OwnerDTO(3, "Eduardo", "Rodriquez", "2693 Commerce St.", "McFarland", "6085558763"));
+		list.add(new OwnerDTO(4, "Harold", "Davis", "563 Friendly St.", "Windsor", "6085553198"));
+		list.add(new OwnerDTO(5, "Peter", "McTavish", "2387 S. Fair Way", "Madison", "6085552765"));
+		return list;
+	}
+
+	public static OwnerDTO newOwnerDTO() {
+		return new OwnerDTO(null, "Marco", "López", "Jr. Los Olivos 123", "Lima", "999999999");
+	}
+
+	public static OwnerDTO newOwnerDTOForDelete() {
+		return new OwnerDTO(null, "Lucía", "Reyes", "Av. Colonial 333", "Callao", "988888888");
+	}
+
 }
