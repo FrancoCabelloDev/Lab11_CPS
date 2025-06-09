@@ -2,28 +2,22 @@ package com.tecsup.petclinic.mapper;
 
 import com.tecsup.petclinic.domain.OwnerTO;
 import com.tecsup.petclinic.entities.Owner;
-import org.springframework.stereotype.Component;
+import org.mapstruct.Mapper;
+import org.mapstruct.NullValueMappingStrategy;
+import org.mapstruct.factory.Mappers;
 
-@Component
-public class OwnerMapper {
+import java.util.List;
 
-    public Owner toEntity(OwnerTO dto) {
-        Owner entity = new Owner();
-        entity.setFirstName(dto.getFirstName());
-        entity.setLastName(dto.getLastName());
-        entity.setAddress(dto.getAddress());
-        entity.setCity(dto.getCity());
-        entity.setTelephone(dto.getTelephone());
-        return entity;
-    }
+@Mapper(componentModel = "spring", nullValueMappingStrategy = NullValueMappingStrategy.RETURN_DEFAULT)
+public interface OwnerMapper {
 
-    public OwnerTO toTO(Owner entity) {
-        OwnerTO dto = new OwnerTO();
-        dto.setFirstName(entity.getFirstName());
-        dto.setLastName(entity.getLastName());
-        dto.setAddress(entity.getAddress());
-        dto.setCity(entity.getCity());
-        dto.setTelephone(entity.getTelephone());
-        return dto;
-    }
+    OwnerMapper INSTANCE = Mappers.getMapper(OwnerMapper.class);
+
+    Owner toOwner(OwnerTO dto);
+
+    OwnerTO toOwnerTO(Owner owner);
+
+    List<OwnerTO> toOwnerTOList(List<Owner> ownerList);
+
+    List<Owner> toOwnerList(List<OwnerTO> dtoList);
 }

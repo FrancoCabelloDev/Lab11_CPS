@@ -14,6 +14,7 @@ com\tecsup\petclinic\services\PetServiceImpl.class
 com\tecsup\petclinic\PetClinicApplication.class
 com\tecsup\petclinic\domain\VetTo.class
 com\tecsup\petclinic\exception\OwnerNotFoundException.class
+com\tecsup\petclinic\mapper\OwnerMapperImpl.class
 com\tecsup\petclinic\entities\Owner.class
 com\tecsup\petclinic\entities\Vet.class
 com\tecsup\petclinic\webs\VetController.class

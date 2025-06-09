@@ -1,33 +1,34 @@
 package com.tecsup.petclinic.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "owners")
+@Entity(name = "owners")
+@NoArgsConstructor
+@Data
 public class Owner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
-    @Column(name = "first_name", nullable = false)
+    @Column(name = "first_name", nullable = false, length = 30)
     private String firstName;
 
-    @Column(name = "last_name", nullable = false)
+    @Column(name = "last_name", nullable = false, length = 30)
     private String lastName;
 
-    @Column(name = "address", nullable = false)
+    @Column(nullable = false, length = 255)
     private String address;
 
-    @Column(name = "city", nullable = true)
+    @Column(nullable = false, length = 80)
     private String city;
 
-    @Column(name = "telephone", nullable = false)
+    @Column(nullable = false, length = 20)
     private String telephone;
 
-    public Owner() {}
-
-    public Owner(Long id, String firstName, String lastName, String address, String city, String telephone) {
+    public Owner(Integer id, String firstName, String lastName, String address, String city, String telephone) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -36,53 +37,11 @@ public class Owner {
         this.telephone = telephone;
     }
 
-    // Getters y Setters
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
+    public Owner(String firstName, String lastName, String address, String city, String telephone) {
         this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
         this.city = city;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 }

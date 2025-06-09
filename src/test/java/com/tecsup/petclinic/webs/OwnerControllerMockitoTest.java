@@ -29,9 +29,10 @@ public class OwnerControllerMockitoTest {
 
     @Test
     void testGetOwnerById() throws Exception {
-        Owner mockOwner = new Owner(1L, "Carlos", "Quispe", "Lima", "Lima", "987654321");
+        // Usamos Integer en lugar de Long para que coincida con el tipo usado en el controlador
+        Owner mockOwner = new Owner(1, "Carlos", "Quispe", "Lima", "Lima", "987654321");
 
-        Mockito.when(ownerService.findById(1L)).thenReturn(mockOwner);
+        Mockito.when(ownerService.findById(1)).thenReturn(mockOwner);
 
         mockMvc.perform(get("/owners/1"))
                 .andExpect(status().isOk())
